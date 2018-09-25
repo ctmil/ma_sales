@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="view_ma_sale_order" model="ir.ui.view">
+        <field name="name">ma.view.sale.order</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+		<field name="pricelist_id" position="after">
+			<field name="billed_amount" />
+		</field>
+        </field>
+    </record>
+
+    <record id="view_ma_sale_order_tree" model="ir.ui.view">
+        <field name="name">ma.view.sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+		<field name="invoice_status" position="after" >
+			<field name="billed_amount" />
+		</field>
+        </field>
+    </record>
+
+</odoo>
+
